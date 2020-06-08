@@ -1,2 +1,2 @@
-# Starter
-Website starting template
+# Bllog
+Portfolio blog project
