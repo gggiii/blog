@@ -18,8 +18,7 @@
             <p class="title">Duke of York 'offered to help Epstein prosecutors' </p>
         </a>
         <a class="single" href="#">
-            <img src="<?php echo BASE_URL?
-            >assets/img/placeholder.png" alt="">
+            <img src="<?php echo BASE_URL?>assets/img/placeholder.png" alt="">
             <p class="title">New Zealand lifts all Covid restrictions, declaring the nation virus-free</p>
         </a>
         <a class="single" href="#">
@@ -33,6 +32,7 @@
         
    </div>
 </div>
+
 
   
 <?php

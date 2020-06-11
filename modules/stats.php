@@ -3,22 +3,27 @@
         public function __construct($db) {
             $this->db = $db;
 
-            $this->track = false;
+            $this->track = true;
 
             $this->cookiename = 'usercookie';
             $this->sessionName = 'usersession';
             $this->logFile = 'stats.txt';
-            $this->cookieDuration = 60*60; //one day
+            $this->cookieDuration = 60*60*24*30; //one month
+
+            $this->excludedPages = array(
+              'assets'
+            );
         }
         public function record(){
-          if($this->track){
+          if($this->track && !in_array(PAGE, $this->excludedPages)){
             //DATA RECORD ARRAY
           $data = array();
-
           //BROWSER INFO
           $b = $this->getBrowser();
           $data['broserName'] = $b['name'];
           $data['broserVersion'] = $b['version'];
+          
+          $data['page'] = PAGE;
 
           //MOBILE/DESKTOP
           $data['mobile'] = $this->isMobile();
@@ -30,24 +35,25 @@
             $data['unique'] = 0;
             //SET VISIT NUMBER
             $newVisits = intval($_COOKIE[$this->cookiename])+1;
-            setcookie($this->cookiename,strval($newVisits),time()+$this->cookieDuration);
+            setcookie($this->cookiename,strval($newVisits),time()+$this->cookieDuration, '/');
 
           }else{
             //FIRST VISIT
             $data['unique'] = 1;
             //GET IP INFO
-            $ipInfo = unserialize(file_get_contents("http://ip-api.com/php/213.81.220.172?fields=status,continent,country,regionName,lat,lon,query"));
-            //$ip = unserialize(file_get_contents("http://ip-api.com/php/".IP."?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query"));
+            //$ipInfo = unserialize(file_get_contents("http://ip-api.com/php/213.81.220.172?fields=status,continent,country,regionName,lat,lon,query"));
+            $ipInfo = unserialize(file_get_contents("http://ip-api.com/php/?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query"));
             $data['ip'] = array(
               'continent'=>$ipInfo['continent'],
               'country'=>$ipInfo['country'],
               'region'=>$ipInfo['regionName'],
+              
               'pos'=>array(
                 'lat'=>$ipInfo['lat'],
                 'lon'=>$ipInfo['lon']
               )
             );
-            setcookie($this->cookiename,'1',time()+$this->cookieDuration);
+            setcookie($this->cookiename,'1',time()+$this->cookieDuration, '/');
           }
 
           //ADD RECORD TO FILE

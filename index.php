@@ -11,8 +11,7 @@
     global $app;
     $app = new App();
     
-    //CREATE STATS RECORD
-    $app->stats->record();
+    
 
     //PARSE FIRST URL ARGUMENT - PAGE
     if(isset($_GET['url'])){
@@ -20,6 +19,9 @@
     }else{
         define("PAGE", 'home');     //DEFAULT PAGE
     }
+
+    //CREATE STATS RECORD
+    $app->stats->record();
 
     //PARSE URL ARGUMENTS
     if(isset($_GET['res'])){

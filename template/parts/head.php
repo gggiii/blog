@@ -21,6 +21,8 @@
         -->
         <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/flickity.css">
         <link rel="stylesheet" href="<?php echo BASE_URL?>assets/css/style.css">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <!--
                 Dynamic STYLE BY PAGE
         -->
@@ -33,20 +35,30 @@
     </head>
     <body>
         <nav>
+                <ul class="social">
+                        <li>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                                <a href="#"><i class="far fa-clipboard"></i></a>
+                        </li>
+                        
+                </ul>
                 <a href="#" class="logo">Blog.</a>
                 <ul>
                         <li>
-                                <a href="#">Link 1</a>
+                                <a href="#">Home</a>
                         </li>
                         <li>
-                                <a href="#">Link 2</a>
+                                <a href="#">Articles</a>
                         </li>
                         <li>
-                                <a href="#">Link 3</a>
+                                <a href="#">Contact</a>
                         </li>
-                        <li>
-                                <a href="#">Link 4</a>
-                        </li>
+                        
                 </ul>
         </nav>
         

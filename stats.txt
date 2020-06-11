@@ -1,0 +1,17 @@
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":1,"ip":{"continent":null,"country":null,"region":null,"pos":{"lat":null,"lon":null}}}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"test","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"test","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
+{"broserName":"firefox","broserVersion":"78.0","page":"home","mobile":0,"unique":0}
