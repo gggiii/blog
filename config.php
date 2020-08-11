@@ -12,9 +12,9 @@
         define('LOCALHOST', false);
     }
     if(LOCALHOST){
-        define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST']."/blog/");
+        define('ROOT_URL', 'http://'.$_SERVER['HTTP_HOST']."/blog/");
     }else{
-        define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST']."/blog/");
+        define('ROOT_URL', 'http://'.$_SERVER['HTTP_HOST']."/blog/");
     }
 
     //CHECK IF COONECTION IS HTTPS
@@ -31,10 +31,10 @@
     define('PAGE_TEMPLATES_DIR','template/pages/');
 
     //DATABASE CREDENTIALS
-    define('DB_HOST','localhost');
-    define('DB_PORT','3306');
-    define('DB_USERNAME','root');
-    define('DB_PASSWORD','');
-    define('DB_DATABASE', 'testea');
+    define('DB_HOST','mariadb103.websupport.sk');
+    define('DB_PORT','3313');
+    define('DB_USERNAME','dummyblog');
+    define('DB_PASSWORD','Sc0-2}dWSJ');
+    define('DB_DATABASE', 'dummyblog');
 
 ?>

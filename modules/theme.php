@@ -1,8 +1,6 @@
 <?php
-    class Theme{
-        public function __construct($db){   
-            //MANDATORY DB INCLUDE FOR EACH MODULE CLASS
-            $this->db = $db;
+    class Theme extends App{
+        public function __construct(){   
 
             //DEFAULT META VALUES
             $this->title = 'Blog';
@@ -26,9 +24,6 @@
         public function title(){
             
             return $this->title;
-        }
-        public function lang(){
-            return $this->lang;
         }
         public function charset(){
             return $this->charset;

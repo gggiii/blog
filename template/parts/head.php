@@ -2,7 +2,7 @@
 global $app;
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $app->theme->lang() ?>">
+<html lang="<?php echo $app->language ?>">
 
 <head>
 	<title><?php echo $app->theme->title() ?></title>
@@ -20,17 +20,16 @@ global $app;
 	<!--
                 STYLES
         -->
-	<link rel="stylesheet" href="<?php echo BASE_URL ?>assets/css/flickity.css">
-	<link rel="stylesheet" href="<?php echo BASE_URL ?>assets/css/style.css">
+	<link rel="stylesheet" href="<?php echo ROOT_URL ?>assets/css/style.css">
 
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 	<!--
                 Dynamic STYLE BY PAGE
         -->
 	<?php
-	$styleUrl = BASE_URL . 'assets/css/' . PAGE . '.css';
-	if (file_get_contents($styleUrl)) {
-		echo '<link rel="stylesheet" href="' . $styleUrl . '">';
+	$styleUrl = 'assets/css/' . PAGE . '.css';
+	if (file_exists($styleUrl)) {
+		echo '<link rel="stylesheet" href="' . ROOT_URL.$styleUrl . '">';
 	}
 	?>
 </head>

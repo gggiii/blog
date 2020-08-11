@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vw;
+    position: relative;
+    padding-bottom: 17vw;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 2vw 15vw 2.5vw 15vw;
+    text-align: center;
+    z-index: 10;
+    transition: background-color 0.2s ease-out;
+    .logo {
+        color: white;
+        text-decoration: none;
+        font-size: 3vw;
+        font-weight: 300;
+    }
+    ul {
+        list-style: none;
+        margin-top: 0.5vw;
+        li {
+            display: inline-block;
+            position: relative;
+            &:after {
+                content: '/';
+                display: block;
+                color: white;
+                position: absolute;
+                right: -0.5vw;
+                top: 0px;
+                font-weight: 300;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding-left: 0.5vw;
+                padding-right: 0.5vw;
+                font-weight: 300;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &:last-child {
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+}
+
+[page="articles"]>nav,
+[page="article"]>nav {
+    background-color: black !important;
+}
+
+.banner {
+    height: 80vh;
+    width: 100vw;
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(transparent 0%, transparent 20%, rgba(0, 0, 0, 0.5) 70%);
+    }
+    .overlay2 {
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.75) 95%);
+        background-attachment: fixed;
+    }
+}
+
+.social {
+    position: absolute;
+    left: 10vw;
+    top: 3.5vw;
+}
+
+footer {
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3vw 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    &>div {
+        width: calc(100% / 4);
+    }
+    .logo {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+        font-size: 3vw;
+        font-weight: 300;
+        width: 50%;
+        a {
+            color: rgba(0, 0, 0, 0.6);
+            text-decoration: none;
+            &:hover {
+                cursor: initial;
+            }
+        }
+    }
+    .contact {
+        padding-top: 0.5vw;
+        a {
+            display: block;
+            color: rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            padding: 3px;
+            width: auto;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .stats {
+        padding-top: 0.5vw;
+        h2 {
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: 500;
+        }
+        table {
+            width: 60%;
+            td {
+                width: 50%;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+    .copyright {
+        color: rgba(0, 0, 0, 0.6);
+        margin-top: 3vw;
+        width: 100%;
+    }
+}
+
+.panel-title {
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1vw;
+    font-weight: 300;
+}
+
+article {
+    width: 100%;
+    height: 15vw;
+    display: block;
+    margin-bottom: 3vw;
+    transition: all 0.2s ease-out;
+    position: relative;
+    &:hover {
+        transform: translateX(1vw);
+        cursor: pointer;
+    }
+    img {
+        display: block;
+        width: 20vw;
+        height: 15vw;
+        float: left;
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.2s ease-out;
+    }
+    &:hover {
+        img {
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+    }
+    a {
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        text-decoration: none;
+    }
+    .title {
+        font-size: 2vw;
+        position: relative;
+        left: 3vw;
+        color: rgba(0, 0, 0, 0.9);
+    }
+    .excerpt {
+        width: 75vw;
+        position: relative;
+        left: 3vw;
+        text-align: justify;
+        color: rgba(0, 0, 0, 0.8);
+    }
+}

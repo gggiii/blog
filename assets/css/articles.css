@@ -1,34 +1,41 @@
-.container{
-    display: flex;
-    padding-top: 1vw;
-    width: 80vw;
-    margin-right: 10vw;
-    margin-left: 10vw;
-    
-}
-.container .main{
-    width: 80%
-}
-.container .sidebar{
-    width: 20%;
-}
-article .excerpt{
-    width: 60vw;
-}
-article .title{
-    width: 60vw;
-}
-.articleFilter{
-    padding: 5px;
-    color: rgba(0, 0, 0, 0.8);
-    border: none;
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1vw;
+  width: 80vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
 }
 
-.topOptions{
-    margin-top: 12vw;
-    height: 3vw;
-    width: 63vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    text-align: right;
+.container .main {
+  width: 80%;
 }
+
+.container .sidebar {
+  width: 20%;
+}
+
+article .excerpt {
+  width: 60vw;
+}
+
+article .title {
+  width: 60vw;
+}
+
+.articleFilter {
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.8);
+  border: none;
+}
+
+.topOptions {
+  margin-top: 12vw;
+  height: 3vw;
+  width: 63vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: right;
+}
+/*# sourceMappingURL=articles.css.map */
